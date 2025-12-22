@@ -4,6 +4,14 @@ AOS.init({
     once: true,
 });
 
+// Mobile Menu Toggle (Basic logic)
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
+
 // Sticky Navbar Background Change on Scroll
 window.addEventListener('scroll', function() {
     const nav = document.querySelector('.navbar');
@@ -34,12 +42,4 @@ faqItems.forEach(item => {
         icon.classList.toggle('fa-plus');
         icon.classList.toggle('fa-minus');
     });
-});
-// Mobile Menu Toggle (Basic logic)
-const menuToggle = document.querySelector('.menu-toggle');
-const navLinks = document.querySelector('.nav-links');
-
-menuToggle.addEventListener('click', () => {
-    // In a real project, you'd add a CSS class to show/hide the menu
-    alert("Mobile Menu functionality can be expanded here!");
 });
