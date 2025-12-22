@@ -18,6 +18,8 @@ window.addEventListener('scroll', function() {
     }
 });
 
+
+
 // FAQ Accordion Logic
 const faqItems = document.querySelectorAll('.faq-item');
 faqItems.forEach(item => {

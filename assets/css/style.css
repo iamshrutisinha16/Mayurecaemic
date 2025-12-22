@@ -27,26 +27,28 @@ body { background: var(--white); color: #333; overflow-x: hidden; }
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 5%;
-    background-color: var(--secondary, #111111); /* fallback */
-    color: white;
-    position: sticky;
+    padding: 14px 5%;
+    background-color: #263238;
+    position: fixed; 
     top: 0;
+    left: 0;
+    width: 100%;
     z-index: 1000;
 }
 
-.logo img {
-    height: 60px;          /* Balanced navbar height */
-    max-height: 100%;
-    width: auto;
-    display: block;
-    object-fit: contain;
+.logo {
+    display: flex;
+    align-items: center;
+    max-width: none;     
 }
 
-@media (max-width: 768px) {
-    .logo img {
-        height: 20px;
-    }
+/* Logo image */
+.logo img {
+    height: 60px;         
+    width: auto;          
+    display: block;
+    transform: scale(1.5); 
+    transform-origin: left center; 
 }
 
 
@@ -65,9 +67,28 @@ body { background: var(--white); color: #333; overflow-x: hidden; }
 }
 .btn-quote:hover { background: #d98a1f; transform: translateY(-3px); }
 
+/* Responsive CSS */
+@media (max-width: 1024px) {
+    .hero-content h1 { font-size: 45px; }
+    .hero-content p { font-size: 16px; }
+    .logo img { height: 50px; transform: scale(1.3); }
+}
+
+@media (max-width: 768px) {
+    .navbar { padding: 10px 5%; }
+    .hero { padding: 0 5%; }
+    .hero-content h1 { font-size: 35px; }
+    .hero-content h5 { font-size: 14px; }
+    .hero-content p { font-size: 14px; }
+    .logo img { height: 40px; transform: scale(1.2); }
+    .nav-links { flex-direction: column; background: #263238; position: fixed; top: 60px; right: -100%; width: 200px; transition: right 0.3s; padding: 20px; }
+    .nav-links.active { right: 0; }
+    .nav-links li { margin: 10px 0; }
+}
+
 /* Hero Section */
 .hero {
-    height: 90vh;
+    height: 100vh;
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://i.pinimg.com/1200x/b6/c0/4f/b6c04f344d42b207b2b0d2bbf90e17cc.jpg');
     background-size: cover;
     background-position: center;
@@ -368,4 +389,108 @@ footer { background: #1a1a1a; color: #ccc; padding: 60px 0 20px; }
     .about-grid { grid-template-columns: 1fr; }
     .hero-content h1 { font-size: 35px; }
     .footer-grid { grid-template-columns: 1fr; }
+}
+
+/* --- Brand Section Styling --- */
+.brand-partners {
+    padding: 80px 0;
+    background: #fdfdfd; /* Light background taaki logos stand out karein */
+    overflow: hidden;
+    border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+.brand-partners .section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.brand-partners .sub-title {
+    color: #FF7A00;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 14px;
+}
+
+.brand-partners h2 {
+    color: rgb(78, 87, 92);
+    font-size: 36px;
+    font-weight: 800;
+}
+
+/* --- Infinite Slider Logic --- */
+.brand-carousel {
+    width: 100%;
+    position: relative;
+    padding: 20px 0;
+}
+
+/* Glass effect gradient on sides */
+.brand-carousel::before,
+.brand-carousel::after {
+    content: "";
+    height: 100%;
+    width: 150px;
+    position: absolute;
+    z-index: 2;
+    pointer-events: none;
+}
+.brand-carousel::before {
+    left: 0;
+    top: 0;
+    background: linear-gradient(to right, #fdfdfd, transparent);
+}
+.brand-carousel::after {
+    right: 0;
+    top: 0;
+    background: linear-gradient(to left, #fdfdfd, transparent);
+}
+
+.brand-track {
+    display: flex;
+    align-items: center;
+    width: calc(250px * 12); /* total items * width */
+    animation: scrollBrands 30s linear infinite;
+}
+
+/* Hover par slider slow ya pause ho jaye */
+.brand-carousel:hover .brand-track {
+    animation-play-state: paused;
+}
+
+@keyframes scrollBrands {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-250px * 6)); } /* Adhe distance tak scroll */
+}
+
+/* Brand Card Style */
+.brand-item {
+    width: 250px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 40px;
+}
+
+.brand-item img {
+    max-width: 160px;
+    max-height: 80px;
+    width: auto;
+    /* Luxury look: Shuruat mein grayscale (black/white) */
+    filter: grayscale(100%) opacity(0.6);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Hover par color pop aur thoda zoom */
+.brand-item:hover img {
+    filter: grayscale(0%) opacity(1);
+    transform: scale(1.15);
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    .brand-partners h2 { font-size: 28px; }
+    .brand-item { width: 180px; padding: 0 20px; }
+    .brand-item img { max-width: 120px; }
 }
