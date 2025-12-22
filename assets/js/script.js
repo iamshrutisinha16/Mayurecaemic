@@ -27,7 +27,6 @@ window.addEventListener('scroll', function() {
 });
 
 
-
 // FAQ Accordion Logic
 const faqItems = document.querySelectorAll('.faq-item');
 faqItems.forEach(item => {
@@ -42,4 +41,78 @@ faqItems.forEach(item => {
         icon.classList.toggle('fa-plus');
         icon.classList.toggle('fa-minus');
     });
+});
+
+/*gallery*/
+// Initialize Animations
+AOS.init({ duration: 1000, once: true });
+
+// Filter Logic
+const filterButtons = document.querySelectorAll('.filter-btn');
+const galleryItems = document.querySelectorAll('.gallery-item');
+
+filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        // Remove active class from buttons
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+
+        const filterValue = button.getAttribute('data-filter');
+
+        galleryItems.forEach(item => {
+            if (filterValue === 'all' || item.classList.contains(filterValue)) {
+                item.style.display = 'block';
+                setTimeout(() => item.style.opacity = '1', 10);
+            } else {
+                item.style.opacity = '0';
+                setTimeout(() => item.style.display = 'none', 400);
+            }
+        });
+    });
+});
+
+// Lightbox (Zoom in logic)
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.querySelector('.lightbox-img');
+const closeLightbox = document.querySelector('.close-lightbox');
+
+galleryItems.forEach(item => {
+    item.addEventListener('click', () => {
+        const imgSrc = item.querySelector('img').src;
+        lightboxImg.src = imgSrc;
+        lightbox.style.display = 'flex';
+    });
+});
+
+closeLightbox.addEventListener('click', () => {
+    lightbox.style.display = 'none';
+});
+
+lightbox.addEventListener('click', (e) => {
+    if (e.target !== lightboxImg) lightbox.style.display = 'none';
+});
+
+/*products*/
+const track = document.getElementById('mainTrack');
+const next = document.getElementById('slideNext');
+const prev = document.getElementById('slidePrev');
+
+let scrollPosition = 0;
+const cardWidth = 410; // Card width (380) + gap (30)
+
+next.addEventListener('click', () => {
+    const maxScroll = track.scrollWidth - track.parentElement.clientWidth;
+    if (scrollPosition < maxScroll) {
+        scrollPosition += cardWidth;
+        if(scrollPosition > maxScroll) scrollPosition = maxScroll; // Fix overflow
+        track.style.transform = `translateX(-${scrollPosition}px)`;
+    }
+});
+
+prev.addEventListener('click', () => {
+    if (scrollPosition > 0) {
+        scrollPosition -= cardWidth;
+        if(scrollPosition < 0) scrollPosition = 0;
+        track.style.transform = `translateX(-${scrollPosition}px)`;
+    }
 });
