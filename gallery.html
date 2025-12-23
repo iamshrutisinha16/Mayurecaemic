@@ -12,52 +12,78 @@
 </head>
 <body>
 <!-- Navbar -->
-<nav class="navbar">
-    <div class="logo">
-        <a href="index.html">
-            <img src="mayurelogo.png" alt="Logo">
+<!-- Unique Header Structure -->
+<header class="custom-studio-header">
+    <!-- Part 1: Black Top (Logo Only) -->
+    <div class="top-black-bar">
+        <a href="index.html" class="studio-logo-link">
+            <img src="assets/img/mayurelogo.png" alt="Logo">
         </a>
     </div>
 
-    <!-- Toggle Button -->
-    <div class="menu-toggle" id="menuToggle">
-        <span></span>
-        <span></span>
-        <span></span>
+    <!-- Part 2: White Bottom (Links) -->
+    <nav class="bottom-white-nav">
+        <!-- Mobile Hamburger Icon -->
+        <div class="studio-menu-btn" id="studioMenuBtn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <ul class="studio-nav-links" id="studioNavLinks">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT US</a></li>
+            <li><a href="product.html">PRODUCTS</a></li>
+             <li><a href="gallery.html">GALLERY</a></li>
+            <li><a href="contact.html">CONTACT US</a></li>
+        </ul>
+         <!-- 4. Extra Button (Optional - Desktop pe side mein ya hidden rakh sakte hain) -->
+    <div class="quote-wrapper">
+        <a href="contact.html" class="btn-quote">GET QUOTE <i class="fas fa-arrow-right"></i></a>
+    </div>
+    </nav>
+</header>
+ <!-- LUXURY GALLERY HERO SECTION -->
+<section class="gl-hero-modern">
+    <!-- Background Image with Parallax Effect -->
+    <div class="gl-hero-bg-wrap">
+        <img src="assets/img/productbanner.png" alt="Gallery Concept" class="gl-hero-img">
+        <div class="gl-hero-overlay"></div>
     </div>
 
-    <ul class="nav-links" id="navLinks">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="product.html">Products</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-    </ul>
+    <div class="container gl-hero-content">
 
-    <a href="contact.html" class="btn-quote">GET QUOTE <i class="fas fa-arrow-right"></i></a>
-</nav>
-   <!-- Gallery Hero Banner -->
-    <section class="gallery-hero">
-        <div class="hero-overlay"></div>
-        <div class="container hero-content" data-aos="fade-up">
-            <span class="tag">OUR SHOWCASE</span>
-            <h1>Explore Our <span class="accent">Masterpieces</span></h1>
-            <p>A visual journey through premium textures, stones, and elegant designs.</p>
+        <div class="gl-title-box" data-aos="zoom-out" data-aos-delay="200">
+            <span class="gl-tagline">OUR SHOWCASE</span>
+            <h1 class="gl-title">Visual <span>Excellence</span></h1>
+            <div class="gl-divider"></div>
+            <p class="gl-subtitle">A curated journey through premium textures and modern architectural designs.</p>
         </div>
-    </section>
+    </div>
+</section>
+  <!-- LUXURY WORK INTRO & FILTER SECTION -->
+<section class="work-header-section">
+    <div class="container">
+        <div class="work-flex-container">
+            <!-- Left Side: Text -->
+            <div class="title-left-box" data-aos="fade-right">
+                <span class="work-label">LATEST PROJECTS</span>
+                <h2 class="work-main-title">Discover Our <br><span>Creations</span></h2>
+                <div class="title-accent-line"></div>
+            </div>
 
-    <!-- Filter Section -->
-    <section class="filter-section">
-        <div class="container">
-            <div class="filter-tabs" data-aos="fade-up">
-                <button class="filter-btn active" data-filter="all">All Designs</button>
-                <button class="filter-btn" data-filter="wall">Wall Tiles</button>
-                <button class="filter-btn" data-filter="floor">Floor Tiles</button>
-                <button class="filter-btn" data-filter="sanitary">Sanitary Ware</button>
-                <button class="filter-btn" data-filter="stone">Marble & Granite</button>
+            <!-- Right Side: Filter Navigation -->
+            <div class="filter-nav-box" data-aos="fade-left">
+                <ul class="filter-controls">
+                    <li class="control active" data-filter="all">All Collection</li>
+                    <li class="control" data-filter="wall">Wall Design</li>
+                    <li class="control" data-filter="floor">Floor Tiles</li>
+                    <li class="control" data-filter="sanitary">Sanitary</li>
+                </ul>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Main Gallery Grid -->
     <section class="gallery-grid-wrapper">
@@ -349,9 +375,9 @@
     <footer>
         <div class="container footer-grid">
             <div class="footer-col">
-                   <div class="logo">
+                   <div class="footer-logo">
                      <a href="index.html">
-                  <img src="mayurelogo.png">
+                  <img src="assets/img/footerlogo.png">
                       </a>
                   </div>
                 <p>Your One-Stop Destination for Premium Tiles, Bath, Stone, Marble, Granite, and Sanitary Wares!</p>

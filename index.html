@@ -12,46 +12,74 @@
 </head>
 <body>
 <!-- Navbar -->
-<nav class="navbar">
-    <div class="logo">
-        <a href="index.html">
-            <img src="mayurelogo.png" alt="Logo">
+<!-- Unique Header Structure -->
+<header class="custom-studio-header">
+    <!-- Part 1: Black Top (Logo Only) -->
+    <div class="top-black-bar">
+        <a href="index.html" class="studio-logo-link">
+            <img src="assets/img/mayurelogo.png" alt="Logo">
         </a>
     </div>
 
-    <!-- Toggle Button -->
-    <div class="menu-toggle" id="menuToggle">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-
-    <ul class="nav-links" id="navLinks">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="product.html">Products</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-    </ul>
-
-    <a href="contact.html" class="btn-quote">GET QUOTE <i class="fas fa-arrow-right"></i></a>
-</nav>
-    <!-- Hero Banner -->
-    <section class="hero-home" id="home">
-        <div class="hero-content" data-aos="fade-up">
-            <h5>WELCOME TO MAYUR CERAMIC</h5>
-            <h1>Marble And The Surf <br><span>Stone Gives Natural</span></h1>
-            <p>Premium quality tiles and stones that meet your lifestyle needs.</p>
-            <a href="#about" class="btn-main">READ MORE <i class="fas fa-arrow-right"></i></a>
+    <!-- Part 2: White Bottom (Links) -->
+    <nav class="bottom-white-nav">
+        <!-- Mobile Hamburger Icon -->
+        <div class="studio-menu-btn" id="studioMenuBtn">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
-    </section>
+
+        <ul class="studio-nav-links" id="studioNavLinks">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT US</a></li>
+            <li><a href="product.html">PRODUCTS</a></li>
+             <li><a href="gallery.html">GALLERY</a></li>
+            <li><a href="contact.html">CONTACT US</a></li>
+        </ul>
+         <!-- 4. Extra Button (Optional - Desktop pe side mein ya hidden rakh sakte hain) -->
+    <div class="quote-wrapper">
+        <a href="contact.html" class="btn-quote">GET QUOTE <i class="fas fa-arrow-right"></i></a>
+    </div>
+    </nav>
+</header>
+
+<div class="header-spacer"></div>
+   <section class="hero-home" id="home">
+    <div class="hero-slider">
+        <div class="slide active" style="background-image: url('assets/img/banner1.jpg');">
+            <div class="hero-content" data-aos="fade-up">
+                <h5>WELCOME TO MAYUR CERAMIC</h5>
+                <h1>Marble And The Surf <span>Stone Gives Natural</span></h1>
+                <p>Premium quality tiles and stones that meet your lifestyle needs.</p>
+                <a href="#about" class="btn-main">READ MORE <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+        <div class="slide" style="background-image: url('assets/img/banner2.png');">
+            <div class="hero-content" data-aos="fade-up">
+                <h5>WELCOME TO MAYUR CERAMIC</h5>
+                <h1>Centurie Design Trend <span>Strength Thoughout</span></h1>
+                <p>Transform your home with our premium range of ceramic and marble tiles.</p>
+                <a href="#about" class="btn-main">READ MORE <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+        <div class="slide" style="background-image: url('assets/img/banner3.jpg');">
+            <div class="hero-content" data-aos="fade-up">
+                <h5>WELCOME TO MAYUR CERAMIC</h5>
+                <h1>Best Stone Suppliers</br><span>Tiles Slabs Pavers</span></h1>
+                <p>Bring luxury and style to your interiors with our natural stones.</p>
+                <a href="#about" class="btn-main">READ MORE <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
 
     <!-- About Section -->
     <section class="about">
         <div class="container">
             <div class="about-grid">
                 <div class="about-img" data-aos="fade-right">
-                    <img src="https://www.mayurceramic.com/images/about-us/about-2.jpg" alt="Showroom">
+                    <img src="assets/img/aboutbanner.png" alt="Showroom">
                     <div class="exp-box">24+ Years Experience</div>
                 </div>
                 <div class="about-text" data-aos="fade-left">
@@ -69,7 +97,7 @@
         </div>
     </section>
 <section class="products">
-    <div class="product-bg-text">COLLECTIONS</div> <!-- Background Decorative Text -->
+    <div class="product-bg-text">COLLECTIONS</div>
     <div class="container">
         <div class="section-title" data-aos="fade-down">
             <span class="badge">OUR EXCLUSIVE RANGE</span>
@@ -84,7 +112,7 @@
                 <!-- Wall Tiles -->
                 <div class="product-card">
                     <div class="p-img-container">
-                        <img src="https://www.mayurceramic.com/images/service-slider/1.jpg" alt="Wall Tiles">
+                        <img src="assets/img/walltiles.png" alt="Wall Tiles">
                         <div class="p-hover-overlay">
                             <div class="p-icon"><i class="fas fa-th-large"></i></div>
                             <a href="#" class="p-quick-view">Explore Gallery</a>
@@ -99,7 +127,7 @@
                 <!-- Floor Tiles -->
                 <div class="product-card">
                     <div class="p-img-container">
-                        <img src="https://www.mayurceramic.com/images/service-slider/2.jpg" alt="Floor Tiles">
+                        <img src="assets/img/floortiles.png" alt="Floor Tiles">
                         <div class="p-hover-overlay">
                             <div class="p-icon"><i class="fas fa-border-all"></i></div>
                             <a href="#" class="p-quick-view">Explore Gallery</a>
@@ -114,7 +142,7 @@
                 <!-- Sanitary Ware -->
                 <div class="product-card">
                     <div class="p-img-container">
-                        <img src="https://www.mayurceramic.com/images/service-slider/3.jpg" alt="Sanitary Ware">
+                        <img src="assets/img/Sanitaryware.png" alt="Sanitary Ware">
                         <div class="p-hover-overlay">
                             <div class="p-icon"><i class="fas fa-sink"></i></div>
                             <a href="#" class="p-quick-view">Explore Gallery</a>
@@ -129,7 +157,7 @@
                 <!-- Bath Fittings -->
                 <div class="product-card">
                     <div class="p-img-container">
-                        <img src="https://www.mayurceramic.com/images/service-slider/4.jpg" alt="Bath Fittings">
+                        <img src="assets/img/BathFittings.png" alt="Bath Fittings">
                         <div class="p-hover-overlay">
                             <div class="p-icon"><i class="fas fa-shower"></i></div>
                             <a href="#" class="p-quick-view">Explore Gallery</a>
@@ -144,7 +172,7 @@
                 <!-- Marble -->
                 <div class="product-card">
                     <div class="p-img-container">
-                        <img src="https://www.mayurceramic.com/images/service-slider/5.jpg" alt="Marble & Granite">
+                        <img src="assets/img/Marble&Granite.png" alt="Marble & Granite">
                         <div class="p-hover-overlay">
                             <div class="p-icon"><i class="fas fa-gem"></i></div>
                             <a href="#" class="p-quick-view">Explore Gallery</a>
@@ -155,12 +183,10 @@
                         <p>Natural stones from Italy</p>
                     </div>
                 </div>
-
-                <!-- Duplicate Cards for Loop (Copy exactly above cards here) -->
                 <!-- Duplicate 1 -->
                 <div class="product-card">
                     <div class="p-img-container">
-                        <img src="https://www.mayurceramic.com/images/service-slider/1.jpg">
+                        <img src="assets/img/walltiles.png">
                         <div class="p-hover-overlay"><div class="p-icon"><i class="fas fa-th-large"></i></div></div>
                     </div>
                     <div class="p-content"><h3>Wall Tiles</h3><p>Designer ceramic</p></div>
@@ -168,7 +194,7 @@
                  <!-- Bath Fittings -->
                 <div class="product-card">
                     <div class="p-img-container">
-                        <img src="https://www.mayurceramic.com/images/service-slider/4.jpg" alt="Bath Fittings">
+                        <img src="assets/img/BathFittings.png" alt="Bath Fittings">
                         <div class="p-hover-overlay">
                             <div class="p-icon"><i class="fas fa-shower"></i></div>
                             <a href="#" class="p-quick-view">Explore Gallery</a>
@@ -179,36 +205,34 @@
                         <p>Luxury faucets & mixers</p>
                     </div>
                 </div>
-             <!-- Bath Fittings -->
+            
                 <div class="product-card">
                     <div class="p-img-container">
-                        <img src="https://www.mayurceramic.com/images/service-slider/5.jpg" alt="Bath Fittings">
+                        <img src="assets/img/floortiles.png" alt="Floor Tiles">
                         <div class="p-hover-overlay">
-                            <div class="p-icon"><i class="fas fa-shower"></i></div>
+                            <div class="p-icon"><i class="fas fa-border-all"></i></div>
                             <a href="#" class="p-quick-view">Explore Gallery</a>
                         </div>
                     </div>
                     <div class="p-content">
-                        <h3>Bath Fittings</h3>
-                        <p>Luxury faucets & mixers</p>
+                        <h3>Floor Tiles</h3>
+                        <p>Durable vitrified solutions</p>
                     </div>
                 </div>
-             <!-- Bath Fittings -->
+      
                 <div class="product-card">
                     <div class="p-img-container">
-                        <img src="https://www.mayurceramic.com/images/service-slider/4.jpg" alt="Bath Fittings">
+                        <img src="assets/img/Marble&Granite.png" alt="Marble & Granite">
                         <div class="p-hover-overlay">
                             <div class="p-icon"><i class="fas fa-shower"></i></div>
                             <a href="#" class="p-quick-view">Explore Gallery</a>
                         </div>
                     </div>
                     <div class="p-content">
-                        <h3>Bath Fittings</h3>
-                        <p>Luxury faucets & mixers</p>
+                        <h3>Marble & Granite</h3>
+                        <p>Natural stones from Italy</p>
                     </div>
                 </div>
-
-
             </div>
         </div>
     </div>
@@ -347,9 +371,9 @@
     <footer>
         <div class="container footer-grid">
             <div class="footer-col">
-                   <div class="logo">
+                   <div class="footer-logo">
                      <a href="index.html">
-                  <img src="mayurelogo.png">
+                  <img src="assets/img/footerlogo.png">
                       </a>
                   </div>
                 <p>Your One-Stop Destination for Premium Tiles, Bath, Stone, Marble, Granite, and Sanitary Wares!</p>

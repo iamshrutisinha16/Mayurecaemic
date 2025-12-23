@@ -11,49 +11,73 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-<!-- Navbar -->
-<nav class="navbar">
-    <div class="logo">
-        <a href="index.html">
-            <img src="mayurelogo.png" alt="Logo">
+<header class="custom-studio-header">
+    <!-- Part 1: Black Top (Logo Only) -->
+    <div class="top-black-bar">
+        <a href="index.html" class="studio-logo-link">
+            <img src="assets/img/mayurelogo.png" alt="Logo">
         </a>
     </div>
 
-    <!-- Toggle Button -->
-    <div class="menu-toggle" id="menuToggle">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-    <ul class="nav-links" id="navLinks">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="product.html">Products</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-    </ul>
+    <!-- Part 2: White Bottom (Links) -->
+    <nav class="bottom-white-nav">
+        <!-- Mobile Hamburger Icon -->
+        <div class="studio-menu-btn" id="studioMenuBtn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
 
-    <a href="contact.html" class="btn-quote">GET QUOTE <i class="fas fa-arrow-right"></i></a>
-</nav>
-<!-- LUXURY PRODUCT BANNER (Full Immersive) -->
-<section class="prod-hero">
-    <div class="hero-bg-parallax"></div>
-    <div class="hero-overlay-dark"></div>
-    <div class="container hero-inner">
-        <div class="hero-info" data-aos="fade-right">
-            <nav class="breadcrumb-luxury">
-                <a href="index.html">Home</a> <span>/</span> <span class="active">Collections</span>
+        <ul class="studio-nav-links" id="studioNavLinks">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT US</a></li>
+            <li><a href="product.html">PRODUCTS</a></li>
+             <li><a href="gallery.html">GALLERY</a></li>
+            <li><a href="contact.html">CONTACT US</a></li>
+        </ul>
+    <div class="quote-wrapper">
+        <a href="contact.html" class="btn-quote">GET QUOTE <i class="fas fa-arrow-right"></i></a>
+    </div>
+    </nav>
+</header>
+<!-- LUXURY PRODUCT BANNER -->
+<section class="premium-hero">
+    <!-- Background Container with Zoom Effect -->
+    <div class="hero-image-box">
+        <img src="assets/img/productbanner.png" alt="Luxury Interior" class="hero-zoom-img">
+        <div class="hero-overlay-gradient"></div>
+    </div>
+
+    <div class="container hero-content-wrapper">
+        <div class="hero-text-box">
+            <nav class="luxury-breadcrumb" data-aos="fade-down">
+                <a href="index.html">Home</a> <span class="sep">/</span> <span class="curr">Collections</span>
             </nav>
-            <h1 class="main-title">Modern <br><span>Architectural</span> <br>Essentials</h1>
-            <p>Curated textures and premium finishes for elite spaces.</p>
-            <div class="hero-btns">
-                <a href="#explore" class="btn-primary-orange">EXPLORE NOW</a>
-                <div class="hero-experience">
-                    <strong>24+</strong>
-                    <span>Years of Trust</span>
+            
+            <h1 class="hero-main-title" data-aos="fade-up" data-aos-delay="200">
+                Premium <br>
+                <span class="gold-text">Architectural</span> <br>
+                Masterpieces
+            </h1>
+            
+            <p class="hero-subtext" data-aos="fade-up" data-aos-delay="400">
+                Experience the fusion of Italian craftsmanship and modern durability. 
+                Designed for spaces that speak luxury.
+            </p>
+            
+            <div class="hero-action-area" data-aos="fade-up" data-aos-delay="600">
+                <a href="#explore" class="btn-luxury-main">EXPLORE COLLECTION</a>
+                <div class="hero-stats">
+                    <span class="stat-num">24+</span>
+                    <span class="stat-label">Years of <br>Excellence</span>
                 </div>
             </div>
         </div>
+    </div>
+
+    <!-- Animated Scroll Down Icon -->
+    <div class="scroll-down-indicator">
+        <div class="mouse-icon"></div>
     </div>
 </section>
 
@@ -62,8 +86,9 @@
     <div class="container-fluid">
         <div class="explorer-header" data-aos="fade-up">
             <div class="title-left">
-                <span class="sub">OUR COLLECTIONS</span>
-                <h2>Premium Categories</h2>
+                <span class="sub">-OUR PRODUCTS</span>
+                <h2>Provides Best Products</h2>
+                <p>At Mayur Ceramic, we are dedicated to transforming spaces with our extensive range of quality products. Step into our showroom and experience the perfect blend of innovation, aesthetics, and functionality. Your dream space begins with Mayur Ceramic – where quality meets excellence.</p>
             </div>
         </div>
 
@@ -72,7 +97,7 @@
                 <!-- Wall Tiles -->
                 <div class="product-card">
                     <div class="card-image bg-soft-grey">
-                        <img src="https://images.unsplash.com/photo-1620627812632-4bf4ca2ab004?auto=format&fit=crop&w=500" alt="Wall Tiles">
+                        <img src="assets/img/walltiles.png" alt="Wall Tiles">
                     </div>
                     <div class="card-info">
                         <h3>Wall Tiles</h3>
@@ -83,7 +108,7 @@
                 <!-- Floor Tiles -->
                 <div class="product-card">
                     <div class="card-image bg-soft-orange">
-                        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=500" alt="Floor Tiles">
+                        <img src="assets/img/floortiles.png" alt="Floor Tiles">
                     </div>
                     <div class="card-info">
                         <h3>Floor Tiles</h3>
@@ -94,7 +119,7 @@
                 <!-- Sanitary Ware -->
                 <div class="product-card">
                     <div class="card-image bg-soft-grey">
-                        <img src="https://hindware.com/wp-content/uploads/2023/11/Water-Closets-Category-Image.png" alt="Sanitary">
+                        <img src="assets/img/Sanitaryware.png" alt="Sanitary">
                     </div>
                     <div class="card-info">
                         <h3>Sanitary Ware</h3>
@@ -105,7 +130,7 @@
                 <!-- Bathroom Fittings -->
                 <div class="product-card">
                     <div class="card-image bg-soft-orange">
-                        <img src="https://hindware.com/wp-content/uploads/2023/11/Faucets-Category-Image.png" alt="Faucets">
+                        <img src="assets/img/BathFittings.png" alt="Faucets">
                     </div>
                     <div class="card-info">
                         <h3>Bathroom Fittings</h3>
@@ -116,7 +141,7 @@
                 <!-- Marble & Granite -->
                 <div class="product-card">
                     <div class="card-image bg-soft-grey">
-                        <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=500" alt="Marble">
+                        <img src="assets/img/Marble&Granite.png" alt="Marble">
                     </div>
                     <div class="card-info">
                         <h3>Marble & Granite</h3>
@@ -128,25 +153,42 @@
     </div>
 </section>
 
-<!-- PREMIUM FOOTER CTA (High-End Design) -->
-<section class="final-cta">
-    <div class="cta-img-side"></div>
-    <div class="cta-content-side" data-aos="fade-left">
-        <div class="cta-inner">
-            <span class="sub">VAPI'S LARGEST SHOWROOM</span>
-            <h2>Experience <span class="orange-text">Luxury</span> <br>At 8000 Sq. Ft.</h2>
-            <p>From Varmora to Hindware, witness the finest collection of premium interior essentials in person.</p>
-            <div class="cta-action-grid">
-                <div class="cta-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <p>Silvassa Road, Vapi</p>
-                </div>
-                <div class="cta-item">
-                    <i class="fas fa-phone-alt"></i>
-                    <p>+91 9512879169</p>
+<!-- PREMIUM FOOTER CTA -->
+<section class="premium-cta-section">
+    <div class="cta-container">
+        <div class="cta-grid-wrapper">
+            
+            <!-- Left Side: Image Box -->
+            <div class="cta-image-box" data-aos="fade-right">
+                <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200" alt="Showroom">
+                <div class="floating-badge">
+                    <span class="b-big">8000</span>
+                    <span class="b-small">Sq. Ft. Showroom</span>
                 </div>
             </div>
-            <a href="contact.html" class="cta-button">GET A CUSTOM QUOTE</a>
+
+            <!-- Right Side: Content Box -->
+            <div class="cta-content-box" data-aos="fade-left">
+                <span class="upper-title">Vapi's Largest Destination</span>
+                <h2 class="main-heading">Experience <span class="highlight">Luxury</span> Like Never Before</h2>
+                <p class="description">Visit our flagship store to explore the premium collection of Varmora, Hindware, and more. Quality that redefines your space.</p>
+                
+                <div class="contact-strip">
+                    <div class="strip-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Silvassa Road, Vapi</span>
+                    </div>
+                    <div class="strip-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>+91 9512879169</span>
+                    </div>
+                </div>
+
+                <a href="contact.html" class="premium-btn">
+                    GET A CUSTOM QUOTE <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
         </div>
     </div>
 </section>
@@ -154,9 +196,9 @@
     <footer>
         <div class="container footer-grid">
             <div class="footer-col">
-                   <div class="logo">
+                   <div class="footer-logo">
                      <a href="index.html">
-                  <img src="mayurelogo.png">
+                  <img src="assets/img/footerlogo.png">
                       </a>
                   </div>
                 <p>Your One-Stop Destination for Premium Tiles, Bath, Stone, Marble, Granite, and Sanitary Wares!</p>

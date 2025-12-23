@@ -12,31 +12,38 @@
 </head>
 <body>
 <!-- Navbar -->
-<nav class="navbar">
-    <div class="logo">
-        <a href="index.html">
-            <img src="mayurelogo.png" alt="Logo">
+<!-- Unique Header Structure -->
+<header class="custom-studio-header">
+    <!-- Part 1: Black Top (Logo Only) -->
+    <div class="top-black-bar">
+        <a href="index.html" class="studio-logo-link">
+            <img src="assets/img/mayurelogo.png" alt="Logo">
         </a>
     </div>
 
-    <!-- Toggle Button -->
-    <div class="menu-toggle" id="menuToggle">
-        <span></span>
-        <span></span>
-        <span></span>
+    <!-- Part 2: White Bottom (Links) -->
+    <nav class="bottom-white-nav">
+        <!-- Mobile Hamburger Icon -->
+        <div class="studio-menu-btn" id="studioMenuBtn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <ul class="studio-nav-links" id="studioNavLinks">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT US</a></li>
+            <li><a href="product.html">PRODUCTS</a></li>
+             <li><a href="gallery.html">GALLERY</a></li>
+            <li><a href="contact.html">CONTACT US</a></li>
+        </ul>
+         <!-- 4. Extra Button (Optional - Desktop pe side mein ya hidden rakh sakte hain) -->
+    <div class="quote-wrapper">
+        <a href="contact.html" class="btn-quote">GET QUOTE <i class="fas fa-arrow-right"></i></a>
     </div>
-
-    <ul class="nav-links" id="navLinks">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="product.html">Products</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-    </ul>
-
-    <a href="contact.html" class="btn-quote">GET QUOTE <i class="fas fa-arrow-right"></i></a>
-</nav>
-<section class="hero">
+    </nav>
+</header>
+<section class="hero-about">
     <div>
         <h1>About Us</h1>
         <div class="breadcrumb">
@@ -55,7 +62,7 @@
             <!-- Left Side: Image with Decorative Elements -->
             <div class="about-visual" data-aos="fade-right">
                 <div class="main-img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800" alt="Mayur Ceramic Showroom">
+                    <img src="assets/img/aboutusimage.png" alt="Mayur Ceramic Showroom">
                     <!-- Floating Orange Badge -->
                     <div class="floating-experience">
                         <h3>24+</h3>
@@ -74,22 +81,10 @@
                 </div>
                 
                 <div class="text-body">
-                    <p>In 2001, the spark of ceramic tiles distribution ignited within us, leading to the inception of <strong>Mayur Ceramic</strong>. Our journey started in a modest 500 sq. ft. space, driven by a grand vision to redefine interior aesthetics.</p>
+                    <p>In 2001, the spark of ceramic tiles distribution ignited within us, leading to the inception of <strong>Mayure Ceramic.</strong>Our humble beginning in a modest 500 sq. ft. space laid the foundation for distributing integrated products across the construction industry – from residential to commercial, retail, and industrial sectors.</p>
                     
-                    <p>By 2023, we expanded into a massive <strong>8000 sq. ft.</strong> showroom on Silvassa Road. We empower our customers to immerse themselves in the world of luxury tiles, marbles, and sanitary wares.</p>
+                    <p>Driven by the vision of providing unparalleled customer satisfaction, Mayur Ceramic expanded its horizons in 2023. We established an expansive 8000 sq. ft. display showroom located at Silvassa Road, Opp HP Petrol Pump. This showroom empowers our valued customers to immerse themselves in the world of tiles, baths, stones, marble, granite, and sanitary wares. With over 24 years of experience, we take pride in satisfying our customers with quality products and exceptional service.</p>
                 </div>
-
-                <div class="journey-milestone">
-                    <div class="m-box">
-                        <span class="m-year">2001</span>
-                        <p>Humble <br>Beginning</p>
-                    </div>
-                    <div class="m-box">
-                        <span class="m-year">2023</span>
-                        <p>Expansion to <br>8000 Sq. Ft.</p>
-                    </div>
-                </div>
-            </div>
 
         </div>
     </div>
@@ -116,9 +111,9 @@
     <footer>
         <div class="container footer-grid">
             <div class="footer-col">
-                   <div class="logo">
+                   <div class="footerlogo">
                      <a href="index.html">
-                  <img src="mayurelogo.png">
+                  <img src="assets/img/footerlogo.png">
                       </a>
                   </div>
                 <p>Your One-Stop Destination for Premium Tiles, Bath, Stone, Marble, Granite, and Sanitary Wares!</p>

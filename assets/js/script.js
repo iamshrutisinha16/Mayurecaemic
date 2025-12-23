@@ -4,14 +4,37 @@ AOS.init({
     once: true,
 });
 
+let slides = document.querySelectorAll('.slide');
+let currentSlide = 0;
+
+function showNextSlide() {
+    slides[currentSlide].classList.remove('active');
+    currentSlide = (currentSlide + 1) % slides.length;
+    slides[currentSlide].classList.add('active');
+}
+
+setInterval(showNextSlide, 5000);
+
 // Mobile Menu Toggle (Basic logic)
-const menuToggle = document.querySelector('.menu-toggle');
-const navLinks = document.querySelector('.nav-links');
+ const studioBtn = document.getElementById('studioMenuBtn');
+const studioMenu = document.getElementById('studioNavLinks');
 
-menuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
+studioBtn.addEventListener('click', () => {
+    studioMenu.classList.toggle('active');
+    
+    // Burger Icon Animation
+    const spans = studioBtn.querySelectorAll('span');
+    studioBtn.classList.toggle('is-open');
+    if(studioBtn.classList.contains('is-open')){
+        spans[0].style.transform = "rotate(45deg) translate(5px, 5px)";
+        spans[1].style.opacity = "0";
+        spans[2].style.transform = "rotate(-45deg) translate(5px, -5px)";
+    } else {
+        spans[0].style.transform = "none";
+        spans[1].style.opacity = "1";
+        spans[2].style.transform = "none";
+    }
 });
-
 // Sticky Navbar Background Change on Scroll
 window.addEventListener('scroll', function() {
     const nav = document.querySelector('.navbar');
@@ -49,23 +72,22 @@ AOS.init({ duration: 1000, once: true });
 
 // Filter Logic
 const filterButtons = document.querySelectorAll('.filter-btn');
-const galleryItems = document.querySelectorAll('.gallery-item');
+document.querySelectorAll('.control').forEach(button => {
+    button.addEventListener('click', function() {
+        // Active class change karna
+        document.querySelectorAll('.control').forEach(btn => btn.classList.remove('active'));
+        this.classList.add('active');
 
-filterButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        // Remove active class from buttons
-        filterButtons.forEach(btn => btn.classList.remove('active'));
-        button.classList.add('active');
+        const filterValue = this.getAttribute('data-filter');
+        const items = document.querySelectorAll('.gallery-item');
 
-        const filterValue = button.getAttribute('data-filter');
-
-        galleryItems.forEach(item => {
+        items.forEach(item => {
             if (filterValue === 'all' || item.classList.contains(filterValue)) {
                 item.style.display = 'block';
-                setTimeout(() => item.style.opacity = '1', 10);
+                setTimeout(() => { item.style.opacity = '1'; }, 10);
             } else {
                 item.style.opacity = '0';
-                setTimeout(() => item.style.display = 'none', 400);
+                setTimeout(() => { item.style.display = 'none'; }, 300);
             }
         });
     });
