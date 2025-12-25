@@ -457,7 +457,7 @@ body { background: var(--white); color: #333; overflow-x: hidden; }
     }
 
     .about-grid {
-        grid-template-columns: 1fr; /* single column mobile */
+        grid-template-columns: 1fr;
         gap: 30px;
     }
 }
@@ -492,7 +492,6 @@ body { background: var(--white); color: #333; overflow-x: hidden; }
 
 
 /* Products Section */
-/* --- Base Styles --- */
 .premium-products {
     padding: 60px 0;
     background: #fff;
@@ -560,9 +559,8 @@ body { background: var(--white); color: #333; overflow-x: hidden; }
     animation-play-state: paused;
 }
 
-/* --- The Product Card (Premium Look) --- */
 .product-card {
-    width: 300px; /* Desktop size */
+    width: 300px; 
     background: #fff;
     border-radius: 12px;
     border: 1px solid #eee;
@@ -571,10 +569,9 @@ body { background: var(--white); color: #333; overflow-x: hidden; }
     flex-shrink: 0;
 }
 
-/* Aspect Ratio Fix - Image will NEVER distort */
 .p-img-box {
     width: 100%;
-    aspect-ratio: 4 / 3; /* Perfectly balanced for Tiles/Marble */
+    aspect-ratio: 4 / 3; 
     position: relative;
     overflow: hidden;
     background: #f8f8f8;
@@ -583,7 +580,7 @@ body { background: var(--white); color: #333; overflow-x: hidden; }
 .p-img-box img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* This is key for image clarity */
+    object-fit: cover; 
     display: block;
     transition: transform 0.5s ease;
 }
@@ -595,7 +592,7 @@ body { background: var(--white); color: #333; overflow-x: hidden; }
 .p-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0,0,0,0.4); /* Subtle dark overlay */
+    background: rgba(0,0,0,0.4); 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -644,10 +641,10 @@ body { background: var(--white); color: #333; overflow-x: hidden; }
 @media (max-width: 768px) {
 
    .premium-products {
+    margin-top: 7px;
     padding: 8px 0 20px;   
     margin-top: 0;
 }
-
 
     .premium-products .container {
         padding-top: 0;
@@ -1040,7 +1037,6 @@ footer p {
     .footer-grid { grid-template-columns: 1fr; }
 }
 
-/* --- Brand Partners Section --- */
 .brand-partners {
     padding: 80px 0;
     background: #fdfdfd;
@@ -1056,7 +1052,6 @@ footer p {
     align-items: center;
 }
 
-/* Sub-title (P tag) styling */
 .brand-partners .sub-title {
     color: #FF7A00;
     font-weight: 800;
@@ -1222,7 +1217,6 @@ footer p {
     box-shadow: 15px 15px 45px rgba(0,0,0,0.12);
 }
 
-/* DECORATIVE BOX */
 .decorative-box {
     position: absolute;
     inset: auto auto -20px -20px;
@@ -1233,7 +1227,6 @@ footer p {
     border-radius: 10px;
 }
 
-/* FLOATING CARD */
 .floating-experience {
     position: absolute;
     bottom: 20px;
@@ -1375,7 +1368,7 @@ footer p {
 @media (max-width: 992px) {
     .about-flex-row {
         flex-direction: column;
-        gap: 40px; /* stacked layout ke liye gap */
+        gap: 40px;
     }
 
     .floating-experience {
@@ -1412,9 +1405,8 @@ footer p {
 
 /* Small devices (768px) */
 @media (max-width: 768px) {
-    /* Hero About */
     .hero-about {
-        height: 60vh; /* banner height mobile ke liye */
+        height: 60vh; 
         padding: 20px;
     }
 
@@ -1484,7 +1476,7 @@ footer p {
 /* Extra small devices (480px) */
 @media (max-width: 480px) {
     .hero-about {
-        height: 50vh; /* mobile ke liye aur reduce */
+        height: 50vh; 
         padding: 15px;
     }
 
@@ -1794,7 +1786,7 @@ button{
     }
 
     .form-map {
-        grid-template-columns: 1fr; /* single column for mobile */
+        grid-template-columns: 1fr; 
         gap: 30px;
         margin-top: 40px;
     }
@@ -1813,7 +1805,7 @@ button{
     }
 
     .map iframe {
-        min-height: 300px; /* smaller height on mobile */
+        min-height: 300px;
     }
 
     .social-icons a {
@@ -2136,8 +2128,8 @@ button{
     width: 100%;
     position: relative;
     display: flex;
-    align-items: center;        /* Vertical center */
-    justify-content: center;    /* Horizontal flow center */
+    align-items: center;       
+    justify-content: center;    
     background-color: #000;
     overflow: hidden;
 }
@@ -2329,13 +2321,6 @@ button{
     100% { transform: translateY(15px); opacity: 0; }
 }
 
-/* Responsive Fixes */
-@media (max-width: 768px) {
-    .hero-main-title { font-size: 45px; }
-    .hero-action-area { gap: 20px; }
-    .btn-luxury-main { width: 100%; text-align: center; }
-}
-
 /* --- Slider Section --- */
 .category-explorer { padding: 120px 0; background: #fff; }
 .explorer-header { 
@@ -2376,16 +2361,6 @@ button{
 .product-card:hover .card-image img {
     transform: scale(1.08);
 }
-@media (max-width: 768px) {
-    .product-card {
-        flex: 0 0 100%;
-    }
-
-    .card-image {
-        height: 340px;
-    }
-}
-
 
 .bg-soft-grey { background: #f0f2f3; }
 .bg-soft-orange { background: #fff5eb; }
@@ -2401,18 +2376,18 @@ button{
     font-weight: 800;
     color: var(--grey-dark);
     letter-spacing: 0.4px;
-    margin: 0;                     /* 👈 gap reset */
+    margin: 0;                    
     position: relative;
 }
 
 /* Elegant underline */
 .card-info h3::after {
     content: "";
-    width: 32px;                   /* thoda chhota = classy */
+    width: 32px;                  
     height: 2px;
     background: var(--primary);
     display: block;
-    margin: 6px auto 8px;          /* 👈 controlled spacing */
+    margin: 6px auto 8px;         
     border-radius: 2px;
 }
 
@@ -2467,8 +2442,8 @@ button{
 
 /* --- SECTION RESET & LAYOUT --- */
 .premium-cta-section {
-    background: #0f1113; /* Dark Premium Theme */
-    padding: 80px 0; /* Control the top/bottom gap here */
+    background: #0f1113; 
+    padding: 80px 0; 
     margin: 0; 
     width: 100%;
     overflow: hidden;
@@ -2590,16 +2565,116 @@ button{
     transform: translateY(-5px);
 }
 
-/* Responsive Fix */
+/* ====================== RESPONSIVE: PREMIUM HERO & PRODUCT ====================== */
+
+/* Tablets (max-width: 991px) */
 @media (max-width: 991px) {
-    .cta-grid-wrapper {
-        grid-template-columns: 1fr;
-        gap: 40px;
-        text-align: center;
+    .premium-hero {
+        height: 70vh; /* reduce hero height for tablet */
+        padding: 20px 5%;
     }
-    .cta-image-box { height: 350px; order: 2; }
-    .contact-strip { justify-content: center; }
-    .main-heading { font-size: 32px; }
-    .floating-badge { right: 10px; }
+
+    .hero-main-title {
+        font-size: clamp(28px, 4vw, 50px);
+    }
+
+    .hero-subtext {
+        font-size: clamp(14px, 1.5vw, 18px);
+        max-width: 90%;
+    }
+
+    .hero-action-area {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .btn-luxury-main {
+        width: 100%;
+        text-align: center;
+        padding: 16px 25px;
+    }
+
+    .hero-stats {
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+    }
+
+    .stat-num { font-size: 32px; }
+    .stat-label { font-size: 10px; }
+
+    /* Product Card */
+    .product-card { flex: 0 0 100%; }
+    .card-image { height: 340px; }
+    .card-info h3 { font-size: 20px; }
+    .card-info a { font-size: 12px; }
 }
 
+/* Mobile Devices (max-width: 768px) */
+@media (max-width: 768px) {
+    .premium-hero {
+        height: 55vh; /* mobile hero height */
+        padding: 15px 5%;
+    }
+
+    .hero-main-title {
+        font-size: clamp(24px, 5vw, 40px);
+        line-height: 1.2;
+    }
+
+    .hero-subtext {
+        font-size: 14px;
+        max-width: 100%;
+        border-left: 3px solid var(--primary);
+        padding-left: 15px;
+        margin-bottom: 25px;
+    }
+
+    .hero-action-area { gap: 15px; }
+    .btn-luxury-main { font-size: 13px; padding: 14px 20px; }
+
+    .stat-num { font-size: 28px; }
+    .stat-label { font-size: 9px; }
+
+    /* Scroll icon */
+    .scroll-down-indicator { bottom: 20px; }
+
+    /* Product Card */
+    .product-card { flex: 0 0 100%; }
+    .card-image { height: 280px; }
+    .card-info h3 { font-size: 18px; }
+    .card-info a { font-size: 11px; }
+
+    /* Slider wrapper padding */
+    .slider-wrapper { padding-left: 10px; padding-right: 10px; }
+}
+
+/* Extra Small Devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .premium-hero {
+        height: 50vh; /* very small screens */
+        padding: 10px 5%;
+    }
+
+    .hero-main-title {
+        font-size: 20px;
+    }
+
+    .hero-subtext {
+        font-size: 12px;
+        padding-left: 12px;
+    }
+
+    .btn-luxury-main { padding: 12px 18px; font-size: 12px; }
+
+    .stat-num { font-size: 24px; }
+    .stat-label { font-size: 8px; }
+
+    /* Product Card */
+    .card-image { height: 220px; }
+    .card-info h3 { font-size: 16px; }
+    .card-info a { font-size: 10px; }
+
+    /* Slider nav buttons */
+    .prev-btn, .next-btn { width: 50px; height: 50px; }
+}
