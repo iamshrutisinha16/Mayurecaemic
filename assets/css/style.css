@@ -1067,7 +1067,6 @@ footer p {
     line-height: 1.2;
 }
 
-/* Heading (H2) styling */
 .brand-partners h2 {
     color: #2d3436;
     font-size: 38px;
@@ -1077,7 +1076,6 @@ footer p {
     letter-spacing: -0.5px;
 }
 
-/* --- Carousel Container --- */
 .brand-carousel {
     width: 100%;
     position: relative;
@@ -1086,7 +1084,6 @@ footer p {
     overflow: hidden;
 }
 
-/* Gradient Overlays (Left & Right) */
 .brand-carousel::before,
 .brand-carousel::after {
     content: "";
@@ -1124,7 +1121,6 @@ footer p {
     100% { transform: translateX(calc(-250px * 7)); }
 }
 
-/* Brand Card Style */
 .brand-item {
     width: 250px;
     height: 100px;
@@ -1144,14 +1140,12 @@ footer p {
     transition: all 0.4s ease-in-out;
 }
 
-/* Hover Effect: Color aur Scale */
 .brand-item:hover img {
     filter: grayscale(0%);
     opacity: 1;
     transform: scale(1.1);
 }
 
-/* --- Responsive Fixes --- */
 @media (max-width: 768px) {
     .brand-partners { padding: 50px 0; }
     
@@ -1375,22 +1369,160 @@ footer p {
     color: #ccc;
 }
 
-/* RESPONSIVE BREAKPOINTS */
+/* ================= RESPONISVE PART ================= */
+
+/* Medium devices (992px) */
 @media (max-width: 992px) {
     .about-flex-row {
         flex-direction: column;
+        gap: 40px; /* stacked layout ke liye gap */
+    }
+
+    .floating-experience {
+        right: 20px;
+        bottom: 20px;
+        padding: 18px 22px;
+    }
+
+    .hero-about h1 {
+        font-size: 42px;
+        margin-bottom: 8px;
+    }
+
+    .section-heading {
+        font-size: 38px;
+    }
+
+    .text-body p {
+        font-size: 16px;
+    }
+
+    .m-year {
+        font-size: 24px;
+    }
+
+    .vm-item {
+        padding: 35px;
+    }
+
+    .vm-item h3 {
+        font-size: 24px;
     }
 }
 
+/* Small devices (768px) */
 @media (max-width: 768px) {
+    /* Hero About */
+    .hero-about {
+        height: 60vh; /* banner height mobile ke liye */
+        padding: 20px;
+    }
+
+    .hero-about h1 {
+        font-size: 28px;
+        line-height: 1.2;
+    }
+
+    /* Floating Experience */
+    .floating-experience {
+        right: 15px;
+        bottom: 15px;
+        padding: 16px 20px;
+    }
+
+    .floating-experience h3 {
+        font-size: 22px;
+    }
+
+    .floating-experience p {
+        font-size: 11px;
+    }
+
+    /* About content */
+    .section-heading {
+        font-size: 30px;
+    }
+
+    .text-body p {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+    /* Milestone */
+    .journey-milestone {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .m-year {
+        font-size: 20px;
+    }
+
+    .m-box p {
+        font-size: 12px;
+    }
+
+    /* Vision Mission */
     .vm-grid {
         grid-template-columns: 1fr;
     }
 
-    .floating-experience {
-        right: 15px;
-        bottom: 15px;
-        padding: 18px 22px;
+    .vm-item {
+        padding: 28px;
+    }
+
+    .vm-item h3 {
+        font-size: 20px;
+    }
+
+    .vm-icon {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+}
+
+/* Extra small devices (480px) */
+@media (max-width: 480px) {
+    .hero-about {
+        height: 50vh; /* mobile ke liye aur reduce */
+        padding: 15px;
+    }
+
+    .hero-about h1 {
+        font-size: 22px;
+    }
+
+    .floating-experience h3 {
+        font-size: 18px;
+    }
+
+    .floating-experience p {
+        font-size: 10px;
+    }
+
+    .section-heading {
+        font-size: 24px;
+    }
+
+    .text-body p {
+        font-size: 13px;
+    }
+
+    .m-year {
+        font-size: 18px;
+    }
+
+    .vm-item h3 {
+        font-size: 18px;
+    }
+
+    .vm-icon {
+        font-size: 24px;
+        margin-bottom: 12px;
+    }
+
+    .vm-item {
+        padding: 22px;
     }
 }
 
@@ -1625,9 +1757,80 @@ button{
     to{opacity:1; transform:scale(1);}
 }
 
-@media(max-width:768px){
-    .hero h1{font-size:36px;}
-    .form-map{grid-template-columns:1fr;}
+@media (max-width: 768px) {
+
+    .hero {
+        height: 60vh; 
+        padding: 20px; 
+    }
+
+    .hero h1 {
+        font-size: 28px; 
+        line-height: 1.2;
+    }
+
+    .breadcrumb {
+        flex-wrap: wrap;
+        font-size: 14px;
+        gap: 5px;
+    }
+
+    .section {
+        margin: 60px auto;
+        padding: 0 15px;
+    }
+
+    .heading h2 {
+        font-size: 28px;
+        margin-bottom: 40px;
+    }
+
+    .cards {
+        gap: 20px;
+    }
+
+    .card {
+        padding: 25px;
+    }
+
+    .form-map {
+        grid-template-columns: 1fr; /* single column for mobile */
+        gap: 30px;
+        margin-top: 40px;
+    }
+
+    form {
+        padding: 25px;
+    }
+
+    input, textarea {
+        padding: 12px;
+    }
+
+    button {
+        padding: 12px 25px;
+        font-size: 14px;
+    }
+
+    .map iframe {
+        min-height: 300px; /* smaller height on mobile */
+    }
+
+    .social-icons a {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 16px;
+    }
+
+    .whatsapp {
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 24px;
+        bottom: 20px;
+        right: 20px;
+    }
 }
 
 /*gallery*/
