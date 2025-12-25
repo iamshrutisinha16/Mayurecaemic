@@ -5,15 +5,13 @@ AOS.init({
 });
 
 let slides = document.querySelectorAll('.slide');
-let currentSlide = 0;
+let current = 0;
 
-function showNextSlide() {
-    slides[currentSlide].classList.remove('active');
-    currentSlide = (currentSlide + 1) % slides.length;
-    slides[currentSlide].classList.add('active');
-}
-
-setInterval(showNextSlide, 5000);
+setInterval(() => {
+    slides[current].classList.remove('active');
+    current = (current + 1) % slides.length;
+    slides[current].classList.add('active');
+}, 4000);
 
 // Mobile Menu Toggle (Basic logic)
  const studioBtn = document.getElementById('studioMenuBtn');
