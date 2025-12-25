@@ -115,26 +115,48 @@ lightbox.addEventListener('click', (e) => {
 });
 
 /*products*/
-const track = document.getElementById('mainTrack');
-const next = document.getElementById('slideNext');
-const prev = document.getElementById('slidePrev');
+document.addEventListener('DOMContentLoaded', () => {
 
-let scrollPosition = 0;
-const cardWidth = 410; // Card width (380) + gap (30)
-
-next.addEventListener('click', () => {
-    const maxScroll = track.scrollWidth - track.parentElement.clientWidth;
-    if (scrollPosition < maxScroll) {
-        scrollPosition += cardWidth;
-        if(scrollPosition > maxScroll) scrollPosition = maxScroll; // Fix overflow
-        track.style.transform = `translateX(-${scrollPosition}px)`;
+    // 1. AOS Initialization (Safe)
+    if (typeof AOS !== 'undefined') {
+        AOS.init({ duration: 1000, once: true });
     }
-});
 
-prev.addEventListener('click', () => {
-    if (scrollPosition > 0) {
-        scrollPosition -= cardWidth;
-        if(scrollPosition < 0) scrollPosition = 0;
-        track.style.transform = `translateX(-${scrollPosition}px)`;
+    // 2. Infinite Loop Logic (No flickering)
+    const track = document.getElementById('productTrack');
+    if (track) {
+        const content = track.innerHTML;
+        track.innerHTML = content + content;
     }
+
+    // 3. Navbar scroll fix
+    const navbar = document.querySelector('.custom-studio-header') || document.querySelector('.navbar');
+    if (navbar) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+                navbar.style.background = '#1a1a1a';
+            } else {
+                navbar.classList.remove('scrolled');
+                navbar.style.background = '#2C3338';
+            }
+        });
+    }
+
+    // 4. Mobile Touch to Pause
+    if (track) {
+        track.addEventListener('touchstart', () => {
+            track.style.animationPlayState = 'paused';
+        }, { passive: true });
+
+        track.addEventListener('touchend', () => {
+            track.style.animationPlayState = 'running';
+        }, { passive: true });
+    }
+
+   // 6. FAST SCROLL (ALL DEVICES)
+if (track) {
+    track.style.animation = 'scroll 8s linear infinite';
+}
+
 });
