@@ -368,7 +368,7 @@ body { background: var(--white); color: #333; overflow-x: hidden; }
 
 /* About Section */
 .about { 
-    padding: 100px 0 40px; /* bottom gap reduce kiya, top 100px maintain */
+    padding: 100px 0 40px; 
 }
 
 .about-grid { 
@@ -383,7 +383,7 @@ body { background: var(--white); color: #333; overflow-x: hidden; }
     height: 420px;
     overflow: hidden;
     border-radius: 12px;
-    margin-bottom: 0; /* extra gap remove */
+    margin-bottom: 0; 
 }
 
 /* Image zoom animation */
@@ -2437,98 +2437,144 @@ button{
 .prev-btn:hover, .next-btn:hover { background: var(--primary); border-color: var(--primary); color: white; }
 
 /* --- SECTION RESET & LAYOUT --- */
+/* ==============================
+   LIGHT PREMIUM CTA SECTION
+============================== */
+
 .premium-cta-section {
-    background: #0f1113; 
-    padding: 80px 0; 
-    margin: 0; 
+    background: linear-gradient(135deg, #f8f9fc, #eef2f7);
+    padding: 90px 0;
     width: 100%;
     overflow: hidden;
     font-family: 'Poppins', sans-serif;
 }
 
+/* ==============================
+   CONTAINER
+============================== */
+
 .cta-container {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: auto;
     padding: 0 20px;
 }
 
+/* ==============================
+   GRID
+============================== */
+
 .cta-grid-wrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr; 
+    grid-template-columns: repeat(2, 1fr);
     gap: 60px;
     align-items: center;
 }
 
-/* --- IMAGE STYLING --- */
+/* ==============================
+   IMAGE
+============================== */
+
 .cta-image-box {
     position: relative;
-    border-radius: 15px;
-    height: 450px;
+    height: 460px;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.08);
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeUp 1s ease forwards;
 }
 
 .cta-image-box img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 15px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    border-radius: 18px;
 }
+
+/* ==============================
+   BADGE
+============================== */
 
 .floating-badge {
     position: absolute;
-    top: -20px;
-    right: -20px;
-    background:  #F2A93B; 
-    color: white;
-    padding: 20px;
+    top: -15px;
+    right: -15px;
+    background: #F2A93B;
+    color: #fff;
+    padding: 18px;
     border-radius: 10px;
     text-align: center;
-    box-shadow: 0 10px 20px rgba(255,107,0,0.3);
-    z-index: 10;
+    box-shadow: 0 15px 25px rgba(242,169,59,0.35);
 }
 
-.floating-badge .b-big { font-size: 28px; font-weight: 800; display: block; }
-.floating-badge .b-small { font-size: 12px; text-transform: uppercase; }
+.floating-badge .b-big {
+    font-size: 28px;
+    font-weight: 800;
+    display: block;
+}
 
-/* --- CONTENT STYLING --- */
+.floating-badge .b-small {
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* ==============================
+   CONTENT
+============================== */
+
 .cta-content-box {
-    color: #ffffff;
+    color: #2b2b2b;
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeUp 1s ease forwards;
+    animation-delay: 0.25s;
 }
+
+/* ==============================
+   TEXT
+============================== */
 
 .upper-title {
-    color: #F2A93B; 
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    color: #F2A93B;
     font-size: 14px;
     font-weight: 600;
-    display: block;
+    text-transform: uppercase;
+    letter-spacing: 2px;
     margin-bottom: 10px;
+    display: block;
 }
 
 .main-heading {
-    font-size: 45px;
+    font-size: 46px;
     line-height: 1.2;
     font-weight: 700;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
+    color: #1f2937;
 }
 
 .highlight {
-    color:  #F2A93B; 
+    color: #F2A93B;
 }
 
 .description {
-    color: #a0a0a0;
     font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 30px;
+    color: #5f6b7a;
+    line-height: 1.7;
+    margin-bottom: 32px;
 }
+
+/* ==============================
+   CONTACT STRIP
+============================== */
 
 .contact-strip {
     display: flex;
     gap: 30px;
     margin-bottom: 40px;
     padding-bottom: 20px;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+    border-bottom: 1px solid #e1e6ee;
 }
 
 .strip-item {
@@ -2537,31 +2583,109 @@ button{
     gap: 10px;
 }
 
-.strip-item i { color:  #F2A93B;  font-size: 18px; }
-.strip-item span { color: #fff; font-size: 15px; font-weight: 500; }
+.strip-item i {
+    color: #F2A93B;
+    font-size: 18px;
+}
 
-/* Button Styling */
+.strip-item span {
+    color: #374151;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+/* ==============================
+   BUTTON
+============================== */
+
 .premium-btn {
     display: inline-flex;
     align-items: center;
-    gap: 15px;
-    background:  #F2A93B; 
+    gap: 12px;
+    background: #F2A93B;
     color: #fff;
-    padding: 16px 35px;
-    border-radius: 5px;
-    text-decoration: none;
+    padding: 16px 38px;
+    border-radius: 6px;
     font-weight: 700;
     letter-spacing: 1px;
-    transition: all 0.3s ease;
+    text-decoration: none;
+    transition: all 0.35s ease;
+    box-shadow: 0 18px 35px rgba(242,169,59,0.35);
 }
 
 .premium-btn:hover {
-    background: #fff;
-    color:  #F2A93B; 
+    background: #1f2937;
+    color: #fff;
     transform: translateY(-5px);
 }
 
-/* ====================== PRODUCT PAGE RESPONSIVE ====================== */
+/* ==============================
+   ANIMATION
+============================== */
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==============================
+   RESPONSIVE
+============================== */
+
+@media (max-width: 991px) {
+    .cta-grid-wrapper {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .cta-image-box {
+        height: 380px;
+    }
+
+    .main-heading {
+        font-size: 38px;
+    }
+}
+
+@media (max-width: 576px) {
+    .premium-cta-section {
+        padding: 70px 0;
+    }
+
+    .cta-image-box {
+        height: 280px;
+    }
+
+    .main-heading {
+        font-size: 30px;
+    }
+
+    .description {
+        font-size: 16px;
+    }
+
+    .contact-strip {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .premium-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .floating-badge {
+        top: 10px;
+        right: 10px;
+        padding: 14px;
+    }
+
+    .floating-badge .b-big {
+        font-size: 22px;
+    }
+}
 
 @media (max-width: 991px) {
     /* Hero Section */
